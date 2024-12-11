@@ -1,5 +1,5 @@
 import React from 'react';
-import { Github, ExternalLink } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
 import { Project } from '../types';
 
 interface ProjectCardProps {
@@ -9,7 +9,7 @@ interface ProjectCardProps {
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   return (
     <a
-      href={project.demo || project.github}
+      href={project.demo}
       target="_blank"
       rel="noopener noreferrer"
       className="block group"
@@ -30,30 +30,18 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
             ))}
           </div>
 
-          <div className="flex space-x-4">
+          {project.demo && (
             <a
-              href={project.github}
+              href={project.demo}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center space-x-2 text-gray-600 hover:text-blue-600 transition-colors"
               onClick={(e) => e.stopPropagation()}
             >
-              <Github className="w-5 h-5" />
-              <span>Code</span>
+              <ExternalLink className="w-5 h-5" />
+              <span>Demo</span>
             </a>
-            {project.demo && (
-              <a
-                href={project.demo}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center space-x-2 text-gray-600 hover:text-blue-600 transition-colors"
-                onClick={(e) => e.stopPropagation()}
-              >
-                <ExternalLink className="w-5 h-5" />
-                <span>Demo</span>
-              </a>
-            )}
-          </div>
+          )}
         </div>
         
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-indigo-600 opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
