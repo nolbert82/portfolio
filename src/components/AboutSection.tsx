@@ -8,7 +8,7 @@ const AboutSection = () => {
     <div className="space-y-8">
       <div className="flex items-start space-x-6">
         <img
-          src="https://unsplash.com/fr/photos/2VQOUEaPdJc"
+          src="https://images.unsplash.com/photo-1733931895490-81d5c723b95a?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt="Profile"
           className="rounded-lg w-56 h-56 object-cover shadow-lg"
         />
