@@ -4,7 +4,7 @@ export const projects = [
     title: "AI-Powered 2048",
     description: "A website where you can play the game 2048, and get helped by an AI.",
     technologies: ["TypeScript", "Expectimax"],
-    demo: "https://poetic-crumble-896d60.netlify.app/"
+    demo: "https://ai-powered-2048-3wgg-1586a8dvl-nolbert82s-projects.vercel.app/"
   },
   {
     id: 2,
